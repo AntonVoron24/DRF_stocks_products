@@ -3,17 +3,12 @@ from logistic.models import Product, Stock, StockProduct
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    # настройте сериализатор для продукта
     class Meta:
         model = Product
         fields = ['id', 'title', 'description']
 
 
 class ProductPositionSerializer(serializers.ModelSerializer):
-    # stock = serializers.PrimaryKeyRelatedField(queryset=Stock.objects.all(), many=True)
-    # product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), many=True)
-
-    # настройте сериализатор для позиции продукта на складе
     class Meta:
         model = StockProduct
         fields = ['product', 'quantity', 'price']
