@@ -26,6 +26,7 @@ class StockViewSet(ModelViewSet):
         'positions__product__description',
     ]
 
+
 @api_view(['GET'])
 def sample_view(response):
     return Response('This is checking!')
