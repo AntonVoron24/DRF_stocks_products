@@ -17,6 +17,7 @@ jobs:
       DB_PORT: ${{ secrets.DB_PORT }}
       DB_USER: ${{ secrets.DB_USER }}
       DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      SSH_KEY: ${{ secrets.SSH_KEY }}
 
     services:
       postgres_main:
@@ -65,7 +66,7 @@ jobs:
         with:
           host: ${{ env.SSH_HOST }}
           username: ${{ env.SSH_USER }}
-          password: ${{ env.SSH_PASSWORD }}
+          key: ${{ env.SSH_KEY }}
           script: expect /home/anton/DRF_stocks_products/pull.exp
 
             
