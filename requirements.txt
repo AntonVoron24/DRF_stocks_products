@@ -5,3 +5,4 @@ flake8
 python-dotenv~=0.21.1
 django-filter~=22.1
 gunicorn
+expects
