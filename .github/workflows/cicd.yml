@@ -66,10 +66,8 @@ jobs:
           host: ${{ env.SSH_HOST }}
           username: ${{ env.SSH_USER }}
           password: ${{ env.SSH_PASSWORD }}
-          script: |
-            cd /home/anton/DRF_stocks_products
-            git pull origin cicd
-            sudo systemctl restart gunicorn
+          script: expect /home/anton/DRF_stocks_products/pull.exp
+
             
 
 

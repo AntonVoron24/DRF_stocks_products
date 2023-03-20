@@ -30,3 +30,7 @@ class StockViewSet(ModelViewSet):
 @api_view(['GET'])
 def sample_view(response):
     return Response('This is checking!')
+
+@api_view(['GET'])
+def cicd_test_view(response):
+    return Response('This is test to CI/CD')
