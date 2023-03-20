@@ -34,4 +34,4 @@ def sample_view(response):
 
 @api_view(['GET'])
 def cicd_test_view(response):
-    return Response('This is test to CI/CD')
+    return Response('Это тест для CI/CD')
