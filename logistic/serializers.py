@@ -39,7 +39,10 @@ class StockSerializer(serializers.ModelSerializer):
         stock = super().update(instance, validated_data)
 
         for obj in positions:
-            update_model = StockProduct.objects.filter(stock=instance, product=obj.get('product'))
+            update_model = StockProduct.objects.filter(
+                stock=instance,
+                product=obj.get('product')
+            )
             if update_model:
                 update_model.update(**obj)
             else:
